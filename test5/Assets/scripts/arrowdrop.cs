@@ -39,6 +39,10 @@ public class arrowdrop : MonoBehaviour
 
         if (distance < r1 + r2)
         {
+            GameObject gd = GameObject.Find("Gamedirector");
+            gd.GetComponent<gamedirector>().DecreaseHP();
+
+
             Destroy(gameObject);
         }
         
