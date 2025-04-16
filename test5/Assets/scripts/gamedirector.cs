@@ -10,7 +10,7 @@ public class gamedirector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hpgauge = GameObject.Find("HP Gauge");
+        hpgauge = GameObject.Find("HPGauge");
     }
 
     // Update is called once per frame
