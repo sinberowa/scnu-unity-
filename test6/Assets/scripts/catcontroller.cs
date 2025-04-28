@@ -8,12 +8,14 @@ public class catcontroller : MonoBehaviour
     public float jumpforce = 680f;
     public float walkforce = 30f;
     public float maxwalkspeed = 2f;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 60;
         rigid2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,5 +41,7 @@ public class catcontroller : MonoBehaviour
         {
             transform.localScale = new Vector3(key, 1, 1);
         }
+
+        animator.speed = speedx / 2f;
     }
 }
