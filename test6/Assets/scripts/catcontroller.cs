@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class catcontroller : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class catcontroller : MonoBehaviour
     public float walkforce = 30f;
     public float maxwalkspeed = 2f;
     Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class catcontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && this.rigid2D.velocity.y == 0)
         { 
             rigid2D.AddForce(transform.up *  jumpforce);
         }
@@ -43,5 +45,17 @@ public class catcontroller : MonoBehaviour
         }
 
         animator.speed = speedx / 2f;
+
+        if (transform.position.y < -10)
+        {
+            SceneManager.LoadScene("game");
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("°ñ");
+        SceneManager.LoadScene("gameclear");
     }
 }
