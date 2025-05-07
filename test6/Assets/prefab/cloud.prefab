@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7494604561401600817}
   - component: {fileID: 7487983566180036421}
   - component: {fileID: 1990009473221372803}
-  - component: {fileID: -3999095517147979553}
+  - component: {fileID: -6308602531717467267}
   m_Layer: 0
   m_Name: cloud
-  m_TagString: Untagged
+  m_TagString: cloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-3999095517147979553
+--- !u!114 &-6308602531717467267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,5 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8defb576f83f85947afc5b0677aa22f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 0.05
-  maxwidth: 10
+  movespeed: 0
+  maxwidth: 3
