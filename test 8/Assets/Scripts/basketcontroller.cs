@@ -64,11 +64,18 @@ public class basketcontroller : MonoBehaviour
         {
             this.aud.PlayOneShot(this.appleSE);
         }
-        else
+        else if (other.gameObject.tag == "bomb")
         {
             this.aud.PlayOneShot(this.boombSE);
         }
+        else
+        {
 
-        Destroy(other.gameObject);
+        }
+
+            Destroy(other.gameObject);
     }
+    
+
 }
+
