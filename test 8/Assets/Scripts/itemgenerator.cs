@@ -10,11 +10,18 @@ public class itemgenerator : MonoBehaviour
     float span = 1.0f;
     float delta = 0f;
     public int radio = 5;
+    float speed = -0.03f;
 
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+    public void SetParmeter(float span, float speed, int radio)
+    {
+        this.span = span;
+        this.speed = speed;
+        this.radio = radio;
     }
 
     // Update is called once per frame
@@ -37,6 +44,7 @@ public class itemgenerator : MonoBehaviour
             float x = Random.Range(-1, 2);
             float z = Random.Range(-1, 2);
             item.transform.position = new Vector3(x, 4, z);
+            item.GetComponent<dropitem>().dropspeed = this.speed;
         }
     }
 }
